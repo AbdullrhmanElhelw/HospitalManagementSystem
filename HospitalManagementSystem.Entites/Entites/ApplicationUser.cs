@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace HospitalManagementSystem.Entites.Entites;
@@ -14,9 +14,6 @@ public class ApplicationUser : IdentityUser
     [NotMapped]
     public string FullName
     {
-        get
-        {
-            return $"{FirstName} {LastName}";
-        }
+        get => $"{FirstName} {LastName}";
     }
 }
